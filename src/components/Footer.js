@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const FooterContainer = styled.footer`
   background-color: #3aafa9;
@@ -126,12 +126,12 @@ const LogoContainer = styled.div`
 const SocialLogoContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;  // Align logos to the right
+  justify-content: flex-end; // Align logos to the right
 
   @media (max-width: 768px) {
-    flex-direction: row;  // Stack logos vertically on small screens
-    align-items: center;  // Center logos on small screens
-    gap: 10px;  // Adjust space between logos on small screens
+    flex-direction: row; // Stack logos vertically on small screens
+    align-items: center; // Center logos on small screens
+    gap: 10px; // Adjust space between logos on small screens
   }
 `;
 
@@ -166,13 +166,14 @@ const LogoText = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 20px;
-    margin:0px;
+    margin: 0px;
   }
 `;
 
 const SocialTitle = styled.h2`
   font-size: 14px;
   color: #fdf5df;
+  letter-spacing: 2px;
   margin: 0;
 
   @media (max-width: 768px) {
@@ -181,8 +182,7 @@ const SocialTitle = styled.h2`
 
 const Footer = () => (
   <FooterContainer>
-
-<ContactWrapper>
+    <ContactWrapper>
       <ContactContainer>
         <LeftSection>
           <LogoContainer>
@@ -192,16 +192,20 @@ const Footer = () => (
         </LeftSection>
 
         <RightSection>
-          <SocialTitle>
-            Follow us on: 
-          </SocialTitle>
+          <SocialTitle>Follow us on:</SocialTitle>
           <SocialLogoContainer>
-            <a href="https://www.instagram.com/project.jomhandson?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <a
+              href="https://www.instagram.com/project.jomhandson?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
               <SocialLogo src="instagramfdf5df.png" alt="Instagram" />
             </a>
             {/* change to email link*/}
-            <a href="https://www.instagram.com/project.jomhandson?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-            <SocialLogo src="mailfdf5df.png" alt="Mail" />
+            <a
+              href="https://www.instagram.com/project.jomhandson?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+            >
+              <SocialLogo src="mailfdf5df.png" alt="Mail" />
             </a>
           </SocialLogoContainer>
         </RightSection>
