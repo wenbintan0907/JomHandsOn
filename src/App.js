@@ -1,4 +1,4 @@
-// src/App.js
+// src/ pp.js
 
 import React, { useRef } from "react";
 import { createGlobalStyle } from "styled-components";
@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Events from "./components/Events";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import Gallery from "./components/Gallery.js";
 import "./App.css";
 
 const GlobalStyle = createGlobalStyle`
@@ -37,7 +38,10 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Header onEventsClick={() => scrollToSection(eventsRef)} onContactClick={() => scrollToSection(contactRef)} />
+      <Header
+        onEventsClick={() => scrollToSection(eventsRef)}
+        onContactClick={() => scrollToSection(contactRef)}
+      />
       <main>
         <Routes>
           <Route
@@ -54,6 +58,7 @@ const App = () => {
               </>
             }
           />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
       <Footer />

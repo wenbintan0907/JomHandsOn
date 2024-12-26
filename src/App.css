@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -66,21 +66,21 @@ footer {
 }
 
 /* Prettier colors */
-.color1 { 
+.color1 {
   background-color: #ff6f61; /* Softer red */
-  animation-delay: 0s; 
+  animation-delay: 0s;
 }
-.color2 { 
+.color2 {
   background-color: #4a90e2; /* Softer blue */
-  animation-delay: 0.1s; 
+  animation-delay: 0.1s;
 }
-.color3 { 
+.color3 {
   background-color: #ffd700; /* Softer yellow */
-  animation-delay: 0.2s; 
+  animation-delay: 0.2s;
 }
-.color4 { 
+.color4 {
   background-color: #e6e6fa; /* Light lavender */
-  animation-delay: 0.4s; 
+  animation-delay: 0.4s;
 }
 
 /* Animation to swipe lines fully across the screen */
@@ -92,3 +92,8 @@ footer {
     transform: translateX(-300vw); /* Move past the left edge */
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.cdnfonts.com/css/proclamate");
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Satisfy&display=swap");

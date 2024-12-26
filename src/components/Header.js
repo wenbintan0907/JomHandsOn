@@ -1,15 +1,15 @@
 // src/components/Header.js
 
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import styled from 'styled-components';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import styled from "styled-components";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 /* Styled Components */
 
 const HeaderContainer = styled.header`
-  background-color: #007BFF;
+  background-color: #007bff;
   padding: 10px 20px;
   position: sticky;
   top: 0;
@@ -70,13 +70,13 @@ const TitleLink = styled(Link)`
   color: white;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #FFD700;
+    color: #ffd700;
   }
 
   font-size: 14px;
@@ -116,7 +116,7 @@ const NavLink = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: #FFD700;
+    color: #ffd700;
   }
 `;
 
@@ -145,7 +145,7 @@ const MobileNav = styled(motion.ul)`
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #007BFF;
+  background-color: #007bff;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -175,11 +175,11 @@ const MobileNavLink = styled.a`
 
 const mobileNavVariants = {
   open: {
-    height: 'auto',
+    height: "auto",
     opacity: 1,
     transition: {
       duration: 0.3,
-      when: 'beforeChildren',
+      when: "beforeChildren",
       staggerChildren: 0.05,
     },
   },
@@ -188,7 +188,7 @@ const mobileNavVariants = {
     opacity: 0,
     transition: {
       duration: 0.3,
-      when: 'afterChildren',
+      when: "afterChildren",
     },
   },
 };
@@ -223,15 +223,15 @@ const Header = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   // Handle navigation and scrolling
   const handleNavigation = (sectionId) => {
     setIsMobileMenuOpen(false);
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
       setPendingScroll(() => () => scrollToSection(sectionId));
     } else {
       scrollToSection(sectionId);
@@ -240,7 +240,7 @@ const Header = () => {
 
   // useEffect to handle pending scroll after navigation
   useEffect(() => {
-    if (pendingScroll && location.pathname === '/') {
+    if (pendingScroll && location.pathname === "/") {
       pendingScroll();
       setPendingScroll(null);
     }
@@ -248,15 +248,22 @@ const Header = () => {
 
   // Define menu items
   const menuItems = [
-    { name: 'Home', onClick: () => handleNavigation('home') },
+    { name: "Home", onClick: () => handleNavigation("home") },
     {
-      name: 'About Us',
+      name: "About Us",
       onClick: () => {
         setIsMobileMenuOpen(false);
-        navigate('/about');
+        navigate("/about");
       },
     },
-    { name: 'Contact Us', onClick: () => handleNavigation('contact') },
+    {
+      name: "Gallery",
+      onClick: () => {
+        setIsMobileMenuOpen(false);
+        navigate("/gallery");
+      },
+    },
+    { name: "Contact Us", onClick: () => handleNavigation("contact") },
   ];
 
   return (
@@ -264,12 +271,12 @@ const Header = () => {
       <HeaderContent>
         <LogoContainer>
           {/* Logo Link - Redirects to Home and Scrolls to Top */}
-          <LogoLink to="/" onClick={() => handleNavigation('home')}>
+          <LogoLink to="/" onClick={() => handleNavigation("home")}>
             <Logo src="/assets/MSI_Logo.png" alt="Logo" />
           </LogoLink>
 
           {/* Title Link - Redirects to Home and Scrolls to Top */}
-          <TitleLink to="/" onClick={() => handleNavigation('home')}>
+          <TitleLink to="/" onClick={() => handleNavigation("home")}>
             Jom Hands-On
           </TitleLink>
         </LogoContainer>
@@ -302,7 +309,9 @@ const Header = () => {
           >
             {menuItems.map((item, index) => (
               <MobileNavItem key={index} variants={mobileNavItemVariants}>
-                <MobileNavLink onClick={item.onClick}>{item.name}</MobileNavLink>
+                <MobileNavLink onClick={item.onClick}>
+                  {item.name}
+                </MobileNavLink>
               </MobileNavItem>
             ))}
           </MobileNav>
