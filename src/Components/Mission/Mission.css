@@ -1,0 +1,86 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.mission_container {
+    width: 100%;
+    /* Changed from max-width to width */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section styles */
+.section {
+    padding: 1.5rem;
+}
+
+/* Header styles */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 30px;
+    color: #000F38;
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+.section-header img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Subtitle styles */
+.subtitle {
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Main text styles */
+.main-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Values list styles */
+.values-list {
+    list-style: none;
+}
+
+.values-list li {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.values-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mission_container {
+        padding: 1rem;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+}

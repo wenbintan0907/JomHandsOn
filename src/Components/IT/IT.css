@@ -1,0 +1,26 @@
+.it-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .it-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .it-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .it-container {
+        gap: 1rem;
+    }
+}

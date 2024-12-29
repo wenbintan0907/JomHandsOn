@@ -1,0 +1,196 @@
+.footer {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #797979;
+  padding: 15px 0;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+  .footer {
+    display: block;
+    text-align: center;
+  }
+}
+
+.FooterContainer {
+  background-color: #3aafa9;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  position: static;
+  width: 100%;
+}
+
+.FooterContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.FooterTextLeft {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+  flex: 1;
+
+  strong {
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.FooterTextRight {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: right;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.ContactWrapper {
+  padding: 0px 20px;
+  max-width: 1400px;
+  margin: 0px auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.ContactContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.LeftSection {
+  flex: 1;
+  padding: 0;
+  text-align: left;
+  margin-top: 12px;
+
+  @media (max-width: 768px) {
+    /* text-align: center; */
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.RightSection {
+  flex: 1;
+  padding: 0;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.SocialLC {
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
+}
+
+.JHOLC {
+  justify-content: flex-start;
+}
+
+.Logo {
+  width: 75px;
+  height: 75px;
+  margin-right: 5px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 0px;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.SocialLogo {
+  width: 75px;
+  height: 75px;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.LogoText {
+  font-size: 22px;
+  color: #fdf5df;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin: 0px;
+  }
+}
+
+.SocialTitle {
+  font-size: 14px;
+  color: #fdf5df;
+  letter-spacing: 2px;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
