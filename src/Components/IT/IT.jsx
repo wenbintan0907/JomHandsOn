@@ -13,7 +13,7 @@ const IT = () => {
       instagram: "@siew_hao",
       age: "18",
       mbti: "ENFJ",
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      quote: "Stay curious, dream big, and believe your imagination can actually make an impact!"
     },
     {
       image: anas,
