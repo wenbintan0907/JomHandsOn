@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`container ${sticky && !isAboutPage ? "dark-nav" : ""} ${
+      className={`container-fluid ${sticky && !isAboutPage ? "dark-nav" : ""} ${
         isAboutPage ? "non-transparent-nav" : ""
       }`}
     >
@@ -64,12 +64,12 @@ const Navbar = () => {
               smooth={true}
               offset={0}
               duration={800}
-              className="btn"
+              className="button"
             >
               Contact Us
             </ScrollLink>
           ) : (
-            <RouterLink to="/#contact" className="btn">
+            <RouterLink to="/#contact" className="button">
               Contact Us
             </RouterLink>
           )}

@@ -38,7 +38,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      <div className="container" style={{ paddingBottom: "100px" }}>
+      <div className="container-fluid" style={{ paddingBottom: "100px" }}>
         <FadeInSection>
           <WhatWeDo />
         </FadeInSection>
