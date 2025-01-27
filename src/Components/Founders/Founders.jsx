@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
 import jun_heng from '../../assets/Founders/Jun Heng.jpg';
-import anas from '../../assets/IT Dept/Anas Individual Pic.JPG';
+import abner from '../../assets/IT Dept/Anas Individual Pic.JPG';
 import jordan from '../../assets/COFOUNDER_JORDANLEE.HEIC';
 import sheng_ze from '../../assets/COFOUNDER_YEOHSHENGZE.jpeg'
 import white_arrow from '../../assets/edusity_assets/white-arrow.png'
@@ -19,7 +19,7 @@ const Founders = ({ showButton = true }) => {
         quote: "Being a human without a dream, what’s the difference between you and a salted fish?"
       },
       {
-        image: anas,
+        image: abner,
         name: "Abner Ju Jing Kui",
         instagram: "@abnerj23",
         age: "19",
