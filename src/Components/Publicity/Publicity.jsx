@@ -1,27 +1,35 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import siew_hao from '../../assets/IT Dept/Siew Hao Individual Pic.JPG';
-import anas from '../../assets/IT Dept/Anas Individual Pic.JPG';
-import wenbin from '../../assets/IT Dept/wenbin.JPG';
+import aliyah from '../../assets/PUBLICITY_ALIYAH.JPG';
+import zainul from '../../assets/PUBLICITY_ZAINUL.jpg';
+import dhiya from '../../assets/PUBLICITYDEPT_DHIYA.jpeg';
 
 const IT = () => {
   const teamMembers = [
     {
-      image: siew_hao,
+      image: zainul,
       name: "Zainul Hakim",
       instagram: "@zaynollie",
       age: "18",
-      mbti: "ENFJ",
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      mbti: "ENFP",
+      quote: "as i was moving ahead occasionally i saw brief glimpses of beauty."
     },
     {
-      image: anas,
+      image: aliyah,
       name: "Aliyah",
       instagram: "@aliyhamin",
       age: "18",
       mbti: "ENFJ",
       quote: "what, like its hard?"
+    },
+    {
+      image: dhiya,
+      name: "Dhiya Arissa",
+      instagram: "@dyarissaa",
+      age: "18",
+      mbti: "INTP",
+      quote: "I value a peace of mind"
     },
   ];
 

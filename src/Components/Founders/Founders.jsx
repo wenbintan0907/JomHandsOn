@@ -4,7 +4,8 @@ import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
 import jun_heng from '../../assets/Founders/Jun Heng.jpg';
 import anas from '../../assets/IT Dept/Anas Individual Pic.JPG';
-import wenbin from '../../assets/IT Dept/wenbin.JPG';
+import jordan from '../../assets/COFOUNDER_JORDANLEE.HEIC';
+import sheng_ze from '../../assets/COFOUNDER_YEOHSHENGZE.jpeg'
 import white_arrow from '../../assets/edusity_assets/white-arrow.png'
 
 const Founders = ({ showButton = true }) => {
@@ -15,26 +16,26 @@ const Founders = ({ showButton = true }) => {
         instagram: "@bro.heng.chai.16",
         age: "19",
         mbti: "ENFJ",
-        quote: "Creativity is intelligence having fun"
+        quote: "Being a human without a dream, what’s the difference between you and a salted fish?"
       },
       {
         image: anas,
-        name: "Aber Ju Jing Kui",
+        name: "Abner Ju Jing Kui",
         instagram: "@abnerj23",
         age: "19",
         mbti: "ENTP",
         quote: "Theory is when you know everything but nothing works. Practice is when everything works but no one knows why. Here, theory and practice are combined: nothing works and no one knows why"
       },
       {
-        image: wenbin,
+        image: jordan,
         name: "Jordan Lee Fur Yuan",
-        instagram: "@wenbin",
+        instagram: "@jordan_lfy",
         age: "18", 
-        mbti: "ISTJ", 
-        quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+        mbti: "ENFP", 
+        quote: "Picasso said ,“it took me a lifetime to paint like a child.” Be that child with endless imagination, ideas, and creativity ; think like an innocent child, and view the world from fresh perspectives without that fear. All in all, stay young kids."
       },
       {
-        image: wenbin,
+        image: sheng_ze,
         name: "Yeoh Sheng Ze",
         instagram: "@i_am_not_shengze",
         age: "18", 

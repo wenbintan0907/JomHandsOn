@@ -30,6 +30,7 @@
 .contact-col p {
     max-width: 450px;
     list-style: 0.3;
+    font-size: 15px;
 }
 
 .contact-col ul li {
@@ -55,6 +56,7 @@
     margin-top: 5px;
     resize: none;
     border-radius: 12px;
+    font-size: 15px;
 }
 
 .contact-col span {

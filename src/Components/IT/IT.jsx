@@ -17,11 +17,11 @@ const IT = () => {
     },
     {
       image: anas,
-      name: "Anas",
-      instagram: "@anas.dev",
+      name: "Tun Anas",
+      instagram: "@anasssaris",
       age: "18",
-      mbti: "INTJ",
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      mbti: "ISTJ",
+      quote: "Results come when you work as hard as what you want to achieve"
     },
     {
       image: wenbin,
@@ -29,7 +29,7 @@ const IT = () => {
       instagram: "@tanwenbin0709",
       age: "18", 
       mbti: "ISTJ", 
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      quote: "Dream big, lead with passion, and let your curiosity pave the way for innovation"
     },
   ];
 
