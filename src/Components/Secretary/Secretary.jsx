@@ -1,19 +1,19 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import siew_hao from '../../assets/IT Dept/Siew Hao Individual Pic.JPG';
+import serene from '../../assets/SECRETARY_SERENE.jpg';
 import wenbin from '../../assets/IT Dept/wenbin.JPG';
 import mani from '../../assets/Secretary and Outreach/mani.jpg'
 
 const IT = () => {
   const teamMembers = [
     {
-      image: siew_hao,
+      image: serene,
       name: "Serene Inulia Kong",
-      instagram: "@siew_hao",
-      age: "18",
-      mbti: "ENFJ",
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      instagram: "@serenekong6",
+      age: "16",
+      mbti: "INTP",
+      quote: "When life shuts a door, open it back. That’s how doors work."
     },
     {
       image: mani,
@@ -26,18 +26,18 @@ const IT = () => {
     {
       image: wenbin,
       name: "Muhammad Harith",
-      instagram: "@wenbin",
+      instagram: "@har_1k1",
       age: "18", 
-      mbti: "ISTJ", 
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      mbti: "INTJ", 
+      quote: "The original is unfaithful to the translation."
     },
     {
       image: wenbin,
       name: "Verness Chia",
-      instagram: "@wenbin",
+      instagram: "@vernessc57",
       age: "18", 
       mbti: "ENFP", 
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      quote: "Keep a single spark to start a prairie fire."
     },
   ];
 

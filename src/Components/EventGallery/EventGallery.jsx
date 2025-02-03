@@ -1,6 +1,8 @@
 import React from 'react';
 import './EventGallery.css';
 import event_1 from '../../assets/makerspace event pics!/IMG_8649.JPG'
+import white_arrow from '../../assets/edusity_assets/white-arrow.png';
+import { Link } from 'react-router-dom';
 
 const EventGallery = () => {
   const event = {
@@ -26,6 +28,12 @@ const EventGallery = () => {
           <p className="event-description">{event.description}</p>
         </div>
       </div>
+      {/* Add the button */}
+      <Link to="/events">
+        <button className="btn dark-btn">
+          View All Events <img src={white_arrow} alt="arrow" />
+        </button>
+      </Link>
     </section>
   );
 };

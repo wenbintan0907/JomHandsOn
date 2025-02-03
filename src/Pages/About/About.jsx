@@ -6,7 +6,9 @@ import IT from '../../Components/IT/IT';
 import Title from '../../Components/Title/Title';
 import Mission from '../../Components/Mission/Mission';
 import Finance from '../../Components/Finance/Finance';
-import Science from '../../Components/Science/Science';
+import Chemistry from '../../Components/Science/Chemistry';
+import Physics from '../../Components/Science/Physics';
+import Biology from '../../Components/Science/Biology';
 import Publicity from '../../Components/Publicity/Publicity';
 import Secretary from '../../Components/Secretary/Secretary';
 import team_img from '../../assets/Team1.JPG'
@@ -35,8 +37,16 @@ const About = () => {
         <Finance />
       </FadeInSection>
       <FadeInSection>
-        <Title subTitle='' title='Science Department'></Title>
-        <Science />
+        <Title subTitle='' title='Chemistry Department'></Title>
+        <Chemistry />
+      </FadeInSection>
+      <FadeInSection>
+        <Title subTitle='' title='Physics Department'></Title>
+        <Physics />
+      </FadeInSection>
+      <FadeInSection>
+        <Title subTitle='' title='Biology Department'></Title>
+        <Biology />
       </FadeInSection>
       <FadeInSection>
         <Title subTitle='' title='Publicity Department'></Title>

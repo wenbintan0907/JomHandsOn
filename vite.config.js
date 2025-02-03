@@ -5,7 +5,4 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.JPG', '**/*.HEIC'],
-  build: {
-    outDir: 'build', // Set the output directory to 'build'
-  },
 });

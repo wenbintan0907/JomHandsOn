@@ -1,34 +1,34 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import siew_hao from '../../assets/IT Dept/Siew Hao Individual Pic.JPG';
-import anas from '../../assets/IT Dept/Anas Individual Pic.JPG';
-import wenbin from '../../assets/IT Dept/wenbin.JPG';
+import wawa from '../../assets/FINANCE_WAWA.png';
+import sunita from '../../assets/FUNDING_SUNITA.jpg';
+import irdina from '../../assets/Iman_ funding.jpg';
 
 const IT = () => {
   const teamMembers = [
     {
-      image: anas,
-      name: "Irdina",
+      image: irdina,
+      name: "Iman Irdina",
       instagram: "@persimmoniy",
       age: "18",
       mbti: "ENTJ",
       quote: "not really into anything unless the outcome is income"
     },
     {
-      image: anas,
-      name: "Wafa",
+      image: wawa,
+      name: "Wafa’ Amni",
       instagram: "@wawajefry",
       age: "18",
-      mbti: "INTJ",
-      quote: "Stay curious, dream big, and believe your imagination can actually make an impact"
+      mbti: "ENFP",
+      quote: "Practice gratitude, always"
     },
     {
-      image: wenbin,
-      name: "Sunita",
+      image: sunita,
+      name: "Sunita Khanijow",
       instagram: "@s.unita_k",
       age: "16", 
-      mbti: "ISTJ", 
+      mbti: "", 
       quote: "at the end of the day, its night"
     },
   ];

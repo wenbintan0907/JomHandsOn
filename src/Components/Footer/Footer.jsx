@@ -1,5 +1,8 @@
 import React from "react";
 import "./Footer.css";
+import logo from "../../assets/transparent_short.png";
+import InstagramLogo from "../../assets/instagram.svg";
+import emailIcon from "../../assets/MailLogo.png";
 
 const Footer = () => (
   <footer className="FooterContainer">
@@ -7,11 +10,7 @@ const Footer = () => (
       <div className="ContactContainer">
         <div className="LeftSection">
           <div className="LogoContainer JHOLC">
-            <img
-              className="Logo"
-              src="src/assets/transparent_short.png"
-              alt="Logo"
-            />
+            <img className="Logo" src={logo} alt="Logo" />
             <h1 className="LogoText">Jom Hands-On</h1>
           </div>
         </div>
