@@ -172,7 +172,7 @@ const Makerspace231124 = () => {
           />
         </Carousel.Item>
       </Carousel>
-      {/* contentsss */}
+      {/* content */}
       <div className="ActivityText">Add text here</div>
     </section>
   );
