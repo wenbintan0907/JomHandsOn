@@ -45,5 +45,7 @@ const Gallery = () => {
     </body>
   );
 };
-
+{
+  /*aada*/
+}
 export default Gallery;

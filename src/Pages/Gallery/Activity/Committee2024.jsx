@@ -58,5 +58,7 @@ const Committee2024 = () => {
     </section>
   );
 };
-
+{
+  /*adawd*/
+}
 export default Committee2024;
