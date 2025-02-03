@@ -24,8 +24,8 @@ const Footer = () => (
               target="_blank"
             >
               <img
-                className="Logo SocialLogo"
-                src="src/assets/InstagramLogo.png"
+                className="InstagramLogo"
+                src="src\assets\InstagramLogo.png"
                 alt="Instagram"
               />
             </a>
@@ -35,8 +35,8 @@ const Footer = () => (
               target="_blank"
             >
               <img
-                className="SocialLogo"
-                src="src/assets/MailLogo.png"
+                className="MailLogo"
+                src="src\assets\MailLogo.png"
                 alt="Mail"
               />
             </a>

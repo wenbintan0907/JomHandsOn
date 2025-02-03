@@ -1,58 +1,12 @@
 import React from "react";
-import styled from "styled-components";
-
-const ActivityCard = styled.section`
-  background-color: #fdf5df;
-  border-radius: 20px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-`;
-
-const ActivityHeading = styled.h1`
-  font-size: 20px;
-  letter-spacing: 3px;
-  padding-top: 7px;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const ActivityText = styled.div`
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const CarouselImage = styled.img`
-  max-height: 300px;
-  margin: 10px auto;
-
-  @media (max-width: 768px) {
-    max-width: 80%;
-    max-height: 140px;
-    margin: 0px;
-  }
-`;
+import "./Activity.css";
 
 const Makerspace091124 = () => {
   return (
-    <ActivityCard className="card card-body">
-      <ActivityHeading>
+    <section className="ActivityCard card card-body">
+      <h1 className="ActivityHeading">
         <strong>Makerspace </strong>@ 9th November 2024
-      </ActivityHeading>
+      </h1>
       <div
         id="Makerspace091124"
         className="carousel slide"
@@ -88,13 +42,13 @@ const Makerspace091124 = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <CarouselImage src="Makerspace.png" />
+            <img className="CarouselImage" src="Makerspace.png" />
           </div>
           <div className="carousel-item">
-            <CarouselImage src="jhologo.png" />
+            <img className="CarouselImage" src="jhologo.png" />
           </div>
           <div className="carousel-item">
-            <CarouselImage src="mailfdf5df.png" />
+            <img className="CarouselImage" src="mailfdf5df.png" />
           </div>
         </div>
         <button
@@ -123,8 +77,8 @@ const Makerspace091124 = () => {
         </button>
       </div>
       {/* content */}
-      <ActivityText>Add text here</ActivityText>
-    </ActivityCard>
+      <div className="ActivityText">Add text here</div>
+    </section>
   );
 };
 

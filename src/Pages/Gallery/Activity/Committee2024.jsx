@@ -1,64 +1,61 @@
 import React from "react";
-import styled from "styled-components";
-
-const ActivityCard = styled.section`
-  background-color: #fdf5df;
-  border-radius: 20px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-`;
-
-const ActivityHeading = styled.h1`
-  font-size: 20px;
-  letter-spacing: 3px;
-  padding-top: 7px;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const ActivityText = styled.div`
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const Image = styled.img`
-  max-height: 300px;
-  margin: 10px auto;
-
-  @media (max-width: 768px) {
-    max-width: 80%;
-    max-height: 140px;
-    margin: 0px;
-  }
-`;
+import "./Activity.css";
+import Carousel from "react-bootstrap/Carousel";
 
 const Committee2024 = () => {
   return (
-    <ActivityCard className="card card-body">
-      <ActivityHeading>
+    <section className="ActivityCard card card-body">
+      <h1 className="ActivityHeading">
         <strong>Jom Hands-On Committee 2024</strong>
-      </ActivityHeading>
-      <div>
-        <Image src="Committee2024.JPG" alt="JHO Committee 2024" />
-      </div>
-      {/* content */}
-      <ActivityText>Add text here</ActivityText>
-    </ActivityCard>
+      </h1>
+      <Carousel data-bs-theme="dark">
+        <Carousel.Item>
+          <img className="d-block CarouselImage" src="src\assets\Team1.JPG" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">FOUNDERS</div>
+          <img
+            className="d-block CarouselImage"
+            src="src\assets\Founders\Founders.jpg"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">FINANCE</div>
+          <img
+            className="d-block CarouselImage"
+            src="src\assets\Finance Dept\TreasurerFundraising.jpg"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">SECRETARY & OUTREACH</div>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/Secretary and Outreach/Secr(L) Outr(R)(1).JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">SCIENCE</div>
+          <img
+            className="d-block CarouselImage"
+            src="src\assets\Science dept\Science.jpg"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">PUBLICITY</div>
+          <img
+            className="d-block CarouselImage"
+            src="src\assets\Publicity Dept\Publicity.jpg"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="ActivityText">IT</div>
+          <img
+            className="d-block CarouselImage"
+            src="src\assets\IT Dept\IT.jpg"
+          />
+        </Carousel.Item>
+      </Carousel>
+    </section>
   );
 };
 

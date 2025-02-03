@@ -162,7 +162,20 @@
   }
 }
 
-.SocialLogo {
+.InstagramLogo {
+  width: 55px;
+  height: 55px;
+  margin-right: 5px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 0px;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.MailLogo {
   width: 75px;
   height: 75px;
   margin: 0;
@@ -175,7 +188,7 @@
 
 .LogoText {
   font-size: 22px;
-  color: #fdf5df;
+  color: #ffffff;
   font-weight: bold;
 
   @media (max-width: 768px) {
@@ -186,7 +199,7 @@
 
 .SocialTitle {
   font-size: 14px;
-  color: #fdf5df;
+  color: #ffffff;
   letter-spacing: 2px;
   margin: 0;
 

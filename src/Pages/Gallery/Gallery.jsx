@@ -1,63 +1,47 @@
-{
-  /* import Makerspace231124 from "./Activity/Makerspace231124.jsx";
+import Makerspace231124 from "./Activity/Makerspace231124.jsx";
 import Makerspace091124 from "./Activity/Makerspace091124.jsx";
-import Committee2024 from "./Activity/Committee2024.jsx"; */
-}
+import Committee2024 from "./Activity/Committee2024.jsx";
+
+import React, { useState } from "react";
 import "./Gallery.css";
 
 const Gallery = () => {
+  const [isCollapsed2024, setIsCollapsed2024] = useState(false);
+  const [isCollapsed2025, setIsCollapsed2025] = useState(false);
+
   return (
     <body className="MainContainer">
       <section className="HeadingContainer">
         <div className="HeadingText">
           <h1 className="Heading">
-            <span className="Span">G</span>
-            <span className="Span">A</span>
-            <span className="Span">L</span>
-            <span className="Span">L</span>
-            <span className="Span">E</span>
-            <span className="Span">R</span>
-            <span className="Span">Y</span>
+            <span className="Span">GALLERY</span>
           </h1>
         </div>
         <div className="ImageContainer">
           <img className="Image" src="src/assets/Team3.JPG" />
         </div>
       </section>
-      <p
+      <button
         className="CollapseButton"
-        class="btn btn-primary"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#2025"
-        aria-expanded="false"
-        aria-controls="2025"
+        onClick={() => setIsCollapsed2025(!isCollapsed2025)}
       >
-        <strong>2025</strong>
-      </p>
-      <div class="collapse" id="2025">
-        <section className="BodyContainer"> </section>
-      </div>
-      <p
+        2025
+      </button>
+      {isCollapsed2025 && <div className="BodyContainer"></div>}
+
+      <button
         className="CollapseButton"
-        class="btn btn-primary"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#2024"
-        aria-expanded="false"
-        aria-controls="2024"
+        onClick={() => setIsCollapsed2024(!isCollapsed2024)}
       >
-        <strong>2024</strong>
-      </p>
-      <div class="collapse" id="2024">
-        <section className="BodyContainer">
-          {/* <Makerspace231124 />
+        2024
+      </button>
+      {isCollapsed2024 && (
+        <div className="BodyContainer">
+          <Makerspace231124 />
           <div className="DashedLine" />
-          <Makerspace091124 />
-          <div className="DashedLine" />
-          <Committee2024 /> */}
-        </section>
-      </div>
+          <Committee2024 />
+        </div>
+      )}
     </body>
   );
 };

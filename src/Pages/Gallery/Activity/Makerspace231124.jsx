@@ -1,130 +1,180 @@
 import React from "react";
-import styled from "styled-components";
-
-const ActivityCard = styled.section`
-  background-color: #fdf5df;
-  border-radius: 20px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-`;
-
-const ActivityHeading = styled.h1`
-  font-size: 20px;
-  letter-spacing: 3px;
-  padding-top: 7px;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const ActivityText = styled.div`
-  font-size: 20px;
-  letter-spacing: 2px;
-  margin: auto;
-  padding: 10px;
-  text-align: center;
-  width: 98%;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-`;
-
-const CarouselImage = styled.img`
-  max-height: 300px;
-  margin: 10px auto;
-
-  @media (max-width: 768px) {
-    max-width: 80%;
-    max-height: 140px;
-    margin: 0px;
-  }
-`;
+import "./Activity.css";
+import Carousel from "react-bootstrap/Carousel";
 
 const Makerspace231124 = () => {
   return (
-    <ActivityCard className="card card-body">
-      <ActivityHeading>
+    <section className="ActivityCard card card-body">
+      <h1 className="ActivityHeading">
         <strong>Makerspace</strong> @ 23rd November 2024
-      </ActivityHeading>
-      <div
-        id="Makerspace231124"
-        className="carousel slide"
-        data-bs-theme="dark"
-      >
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#Makerspace231124"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#Makerspace231124"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#Makerspace231124"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#Makerspace231124"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <CarouselImage src="Makerspace.png" />
-          </div>
-          <div className="carousel-item">
-            <CarouselImage src="jhologo.png" />
-          </div>
-          <div className="carousel-item">
-            <CarouselImage src="mailfdf5df.png" />
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#Makerspace231124"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#Makerspace231124"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      </h1>
+      <Carousel data-bs-theme="dark">
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/Makerspace.png"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02284.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02290.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02291.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02292.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02293.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02297.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02299.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02309.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02311.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02320.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02324.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02325.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02330.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02332.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02346.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02352.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02353.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02356.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02360.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02363.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02364.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/IMG_8649.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02338.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02365.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02339.JPG"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block CarouselImage"
+            src="src/assets/makerspace event pics!/DSC02340.JPG"
+          />
+        </Carousel.Item>
+      </Carousel>
       {/* content */}
-      <ActivityText>Add text here</ActivityText>
-    </ActivityCard>
+      <div className="ActivityText">Add text here</div>
+    </section>
   );
 };
 
