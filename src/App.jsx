@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import FadeInSection from './Components/FadeInSection/FadeInSection';
-import Hero from './Components/Hero/Hero';
-import About from './Pages/About/About';
-import Founders from './Components/Founders/Founders';
-import IT from './Components/IT/IT';
-import Contact from './Components/Contact/Contact';
-import ContactPage from './Pages/Contact/ContactPage';
-import Footer from './Components/Footer/Footer';
-import Title from './Components/Title/Title';
-import WhatWeDo from './Components/WhatWeDo/WhatWeDo';
-import EventGallery from './Components/EventGallery/EventGallery';
+import React, { useEffect } from "react";
+
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import FadeInSection from "./Components/FadeInSection/FadeInSection";
+import Hero from "./Components/Hero/Hero";
+import About from "./Pages/About/About";
+import Founders from "./Components/Founders/Founders";
+import IT from "./Components/IT/IT";
+import Contact from "./Components/Contact/Contact";
+import ContactPage from "./Pages/Contact/ContactPage";
+import Footer from "./Components/Footer/Footer";
+import Title from "./Components/Title/Title";
+import WhatWeDo from "./Components/WhatWeDo/WhatWeDo";
+import EventGallery from "./Components/EventGallery/EventGallery";
+import Gallery from "./Pages/Gallery/Gallery";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -21,15 +23,15 @@ const ScrollToTop = () => {
   }, [pathname]);
 
   return null;
-}
+};
 
 const HomePage = () => {
   const location = useLocation();
   useEffect(() => {
-    if (location.hash === '#contact') {
-      const contactSection = document.getElementById('contact');
+    if (location.hash === "#contact") {
+      const contactSection = document.getElementById("contact");
       if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
+        contactSection.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -39,23 +41,23 @@ const HomePage = () => {
       <FadeInSection>
         <Hero />
       </FadeInSection>
-      <div className="container" style={{ paddingBottom: '100px' }}>
+      <div className="container" style={{ paddingBottom: "100px" }}>
         <FadeInSection>
           <WhatWeDo />
         </FadeInSection>
 
         <FadeInSection>
-          <Title subTitle='' title='GALLERY' />
-          <EventGallery/>
+          <Title subTitle="" title="GALLERY" />
+          <EventGallery />
         </FadeInSection>
 
         <FadeInSection>
-          <Title subTitle='' title='MEET OUR FOUNDERS' />
+          <Title subTitle="" title="MEET OUR FOUNDERS" />
           <Founders showButton={true} />
         </FadeInSection>
 
         <FadeInSection>
-          <Title subTitle='' title='get in touch' />
+          <Title subTitle="" title="get in touch" />
           <div id="contact">
             <Contact />
           </div>
@@ -73,31 +75,51 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={
-            <FadeInSection>
-              <About />
-            </FadeInSection>
-          } />
-          <Route path="/founders" element={
-            <FadeInSection>
-              <Founders />
-            </FadeInSection>
-          } />
-          <Route path="/it" element={
-            <FadeInSection>
-              <IT />
-            </FadeInSection>
-          } />
-          <Route path="/contact" element={
-            <FadeInSection>
-              <ContactPage />
-            </FadeInSection>
-          } />
+          <Route
+            path="/about"
+            element={
+              <FadeInSection>
+                <About />
+              </FadeInSection>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <FadeInSection>
+                <Gallery />
+              </FadeInSection>
+            }
+          />
+          <Route
+            path="/founders"
+            element={
+              <FadeInSection>
+                <Founders />
+              </FadeInSection>
+            }
+          />
+          <Route
+            path="/it"
+            element={
+              <FadeInSection>
+                <IT />
+              </FadeInSection>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <FadeInSection>
+                <ContactPage />
+              </FadeInSection>
+            }
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

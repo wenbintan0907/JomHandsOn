@@ -1,5 +1,4 @@
 import Makerspace231124 from "./Activity/Makerspace231124.jsx";
-import Makerspace091124 from "./Activity/Makerspace091124.jsx";
 import Committee2024 from "./Activity/Committee2024.jsx";
 
 import React, { useState } from "react";
