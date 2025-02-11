@@ -17,7 +17,7 @@ const IT = () => {
     },
     {
       image: wawa,
-      name: "Wafa’ Amni",
+      name: "Wawa Jefry",
       instagram: "@wawajefry",
       age: "18",
       mbti: "ENFP",

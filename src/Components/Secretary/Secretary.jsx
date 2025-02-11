@@ -2,7 +2,7 @@ import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
 import serene from '../../assets/SECRETARY_SERENE.jpg';
-import wenbin from '../../assets/IT Dept/wenbin.JPG';
+import verness from '../../assets/verness.jpeg';
 import mani from '../../assets/Secretary and Outreach/mani.jpg'
 
 const IT = () => {
@@ -24,7 +24,7 @@ const IT = () => {
       quote: "Always say yes to opportunities. You never know if you never try."
     },
     {
-      image: wenbin,
+      image: verness,
       name: "Muhammad Harith",
       instagram: "@har_1k1",
       age: "18", 
@@ -32,7 +32,7 @@ const IT = () => {
       quote: "The original is unfaithful to the translation."
     },
     {
-      image: wenbin,
+      image: verness,
       name: "Verness Chia",
       instagram: "@vernessc57",
       age: "18", 

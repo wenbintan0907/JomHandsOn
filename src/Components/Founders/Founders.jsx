@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import jun_heng from '../../assets/Founders/Jun Heng.jpg';
-import abner from '../../assets/IT Dept/Anas Individual Pic.JPG';
+import jun_heng from '../../assets/FOUNDER_HENG.jpg';
+import abner from '../../assets/COFOUNDER_ABNERJUJINGKUI.jpg';
 import jordan from '../../assets/COFOUNDER_JORDANLEE.HEIC';
 import sheng_ze from '../../assets/COFOUNDER_YEOHSHENGZE.jpeg'
 import white_arrow from '../../assets/edusity_assets/white-arrow.png'

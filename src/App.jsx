@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer';
 import Title from './Components/Title/Title';
 import WhatWeDo from './Components/WhatWeDo/WhatWeDo';
 import EventGallery from './Components/EventGallery/EventGallery';
+import Gallery from './Pages/Gallery/Gallery';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -76,6 +77,11 @@ const App = () => {
           <Route path="/about" element={
             <FadeInSection>
               <About />
+            </FadeInSection>
+          } />
+          <Route path="/gallery" element={
+            <FadeInSection>
+              <Gallery />
             </FadeInSection>
           } />
           <Route path="/founders" element={

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './FadeInSection.css';
 
 const FadeInSection = ({ children }) => {
-  const [isVisible, setVisible] = useState(true);
+  const [isVisible, setVisible] = useState(false);
   const domRef = useRef();
 
   useEffect(() => {

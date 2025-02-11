@@ -29,7 +29,7 @@ const EventGallery = () => {
         </div>
       </div>
       {/* Add the button */}
-      <Link to="/events">
+      <Link to="/gallery">
         <button className="btn dark-btn">
           View All Events <img src={white_arrow} alt="arrow" />
         </button>

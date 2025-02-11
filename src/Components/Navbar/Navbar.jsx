@@ -22,6 +22,7 @@ const Navbar = () => {
 
   const isHomePage = location.pathname === '/';
   const isAboutPage = location.pathname === '/about';
+  const isGalleryPage = location.pathname === '/gallery';
 
   const handleAboutClick = () => {
     if (isAboutPage) {
@@ -30,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`container ${sticky && !isAboutPage ? 'dark-nav' : ''} ${isAboutPage ? 'non-transparent-nav' : ''}`}>
+    <nav className={`container ${sticky && !isAboutPage && !isGalleryPage ? 'dark-nav' : ''} ${isAboutPage || isGalleryPage ? 'non-transparent-nav' : ''}`}>
       {isHomePage ? (
         <ScrollLink to="hero" smooth={true} offset={0} duration={800}>
           <img src={logo} alt="logo" className="logo" />
