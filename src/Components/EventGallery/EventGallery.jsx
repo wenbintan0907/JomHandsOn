@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom';
 
 const EventGallery = () => {
   const event = {
-    title: "Lorem Ipsum",
+    title: "Makerspace!",
     date: "December 15, 2023",
-    description: "Lorem Ipsum",
     image: ""
   };
 

@@ -25,7 +25,7 @@ const ScrollToTop = () => {
 }
 
 const HomePage = () => {
-  const location = useLocation();
+  const location = useLonpmcation();
   useEffect(() => {
     if (location.hash === '#contact') {
       const contactSection = document.getElementById('contact');
