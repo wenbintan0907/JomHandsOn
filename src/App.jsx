@@ -1,40 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import FadeInSection from './Components/FadeInSection/FadeInSection';
 import Hero from './Components/Hero/Hero';
-import About from './Pages/About/About';
+const About = lazy(() => import('./Pages/About/About.jsx'));
 import Founders from './Components/Founders/Founders';
-import IT from './Components/IT/IT';
+const IT = lazy(() => import('./Components/IT/IT.jsx'));
 import Contact from './Components/Contact/Contact';
-import ContactPage from './Pages/Contact/ContactPage';
+const ContactPage = lazy(() => import('./Pages/Contact/ContactPage.jsx'));
 import Footer from './Components/Footer/Footer';
 import Title from './Components/Title/Title';
 import WhatWeDo from './Components/WhatWeDo/WhatWeDo';
 import EventGallery from './Components/EventGallery/EventGallery';
-import Gallery from './Pages/Gallery/Gallery';
+const Gallery = lazy(() => import('./Pages/Gallery/Gallery.jsx'));
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
+  const { pathname, hash, key } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const frame = requestAnimationFrame(() => {
+      if (hash) {
+        const target = document.getElementById(hash.slice(1));
+        if (target) {
+          const navHeight = document.querySelector('nav')?.getBoundingClientRect().height ?? 0;
+          window.scrollTo({
+            top: window.scrollY + target.getBoundingClientRect().top - navHeight + (hash === '#contact' ? 24 : 0),
+            behavior: 'instant',
+          });
+        }
+      } else window.scrollTo(0, 0);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [pathname, hash, key]);
 
   return null;
 }
 
 const HomePage = () => {
-  const location = useLonpmcation();
-  useEffect(() => {
-    if (location.hash === '#contact') {
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
-
   return (
     <>
       <FadeInSection>
@@ -55,12 +56,12 @@ const HomePage = () => {
           <Founders showButton={true} />
         </FadeInSection>
 
-        <FadeInSection>
-          <Title subTitle='' title='get in touch' />
-          <div id="contact">
+        <section id="contact">
+          <FadeInSection>
+            <Title subTitle='' title='get in touch' />
             <Contact />
-          </div>
-        </FadeInSection>
+          </FadeInSection>
+        </section>
       </div>
     </>
   );
@@ -71,8 +72,8 @@ const App = () => {
     <div>
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar />
-        <Routes>
+        <a className="skip-link" href="#main-content">Skip to content</a><Navbar />
+        <main id="main-content"><Suspense fallback={<p className="route-loading" role="status">Loading…</p>}><Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={
             <FadeInSection>
@@ -86,12 +87,12 @@ const App = () => {
           } />
           <Route path="/founders" element={
             <FadeInSection>
-              <Founders />
+              <div className="container about-page"><Founders showButton={false} /></div>
             </FadeInSection>
           } />
           <Route path="/it" element={
             <FadeInSection>
-              <IT />
+              <div className="container about-page"><IT /></div>
             </FadeInSection>
           } />
           <Route path="/contact" element={
@@ -99,7 +100,7 @@ const App = () => {
               <ContactPage />
             </FadeInSection>
           } />
-        </Routes>
+        <Route path="*" element={<div className="container about-page"><h1>Page not found</h1><a href="/">Return home</a></div>} /></Routes></Suspense></main>
         <Footer />
       </BrowserRouter>
     </div>

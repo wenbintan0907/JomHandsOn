@@ -1,9 +1,9 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import dilpreet from '../../assets/CHEMDEPT_DILPREET.jpg';
-import maryam from '../../assets/CHEMDEPT_MARYAM.jpg';
-import amber from '../../assets/Science dept/IMG_0351.JPG'
+import dilpreet from '../../assets/CHEMDEPT_DILPREET.webp';
+import maryam from '../../assets/CHEMDEPT_MARYAM.webp';
+import amber from '../../assets/Science dept/IMG_0351.webp'
 
 const IT = () => {
   const teamMembers = [
@@ -11,8 +11,8 @@ const IT = () => {
       image: amber,
       name: "Amber Poi",
       instagram: "@amberpoi",
-      age: "18", 
-      mbti: "INTP", 
+      age: "18",
+      mbti: "INTP",
       quote: "You don’t need a reason to do something randomly "
     },
     {

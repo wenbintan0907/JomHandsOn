@@ -1,9 +1,9 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import aliyah from '../../assets/PUBLICITY_ALIYAH.JPG';
-import zainul from '../../assets/PUBLICITY_ZAINUL.jpg';
-import dhiya from '../../assets/PUBLICITYDEPT_DHIYA.jpeg';
+import aliyah from '../../assets/PUBLICITY_ALIYAH.webp';
+import zainul from '../../assets/PUBLICITY_ZAINUL.webp';
+import dhiya from '../../assets/PUBLICITYDEPT_DHIYA.webp';
 
 const IT = () => {
   const teamMembers = [

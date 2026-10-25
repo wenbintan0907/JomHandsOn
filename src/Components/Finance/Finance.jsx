@@ -1,9 +1,9 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import wawa from '../../assets/FINANCE_WAWA.png';
-import sunita from '../../assets/FUNDING_SUNITA.jpg';
-import irdina from '../../assets/Iman_ funding.jpg';
+import wawa from '../../assets/FINANCE_WAWA.webp';
+import sunita from '../../assets/FUNDING_SUNITA.webp';
+import irdina from '../../assets/Iman_ funding.webp';
 
 const IT = () => {
   const teamMembers = [
@@ -27,8 +27,8 @@ const IT = () => {
       image: sunita,
       name: "Sunita Khanijow",
       instagram: "@s.unita_k",
-      age: "16", 
-      mbti: "", 
+      age: "16",
+      mbti: "",
       quote: "at the end of the day, its night"
     },
   ];

@@ -1,67 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../../assets/transparent_long.png';
+import logo from '../../assets/transparent_long.webp';
 import menu from '../../assets/edusity_assets/menu-icon.png';
-import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
 
-const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      window.scrollY > 100 ? setSticky(true) : setSticky(false);
-    });
-  }, []);
-
+export default function Navbar() {
+  const [sticky, setSticky] = useState(() => window.scrollY > 100);
   const [mobileMenu, setMobileMenu] = useState(false);
-  const toggleMenu = () => {
-    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
-  }
-
-  const isHomePage = location.pathname === '/';
-  const isAboutPage = location.pathname === '/about';
-  const isGalleryPage = location.pathname === '/gallery';
-
-  const handleAboutClick = () => {
-    if (isAboutPage) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
+  const location = useLocation();
+  useEffect(() => {
+    const onScroll = () => setSticky(window.scrollY > 100);
+    const onKey = (event) => { if (event.key === 'Escape') setMobileMenu(false); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('keydown', onKey);
+    };
+  }, []);
+  const close = () => setMobileMenu(false);
   return (
-    <nav className={`container ${sticky && !isAboutPage && !isGalleryPage ? 'dark-nav' : ''} ${isAboutPage || isGalleryPage ? 'non-transparent-nav' : ''}`}>
-      {isHomePage ? (
-        <ScrollLink to="hero" smooth={true} offset={0} duration={800}>
-          <img src={logo} alt="logo" className="logo" />
-        </ScrollLink>
-        ) : (
-          <RouterLink to="/">
-            <img src={logo} alt="logo" className="logo" />
-          </RouterLink>
-        )}
-      <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
-        <li>
-          {isHomePage ? (
-            <ScrollLink to='hero' smooth={true} offset={0} duration={800}>Home</ScrollLink>
-          ) : (
-            <RouterLink to="/">Home</RouterLink>
-          )}
-        </li>
-        <li><RouterLink to="/about" onClick={handleAboutClick}>About Us</RouterLink></li>
-        <li><RouterLink to="/gallery" onClick={handleAboutClick}>Gallery</RouterLink></li>
-        <li>
-          {isHomePage ? (
-            <ScrollLink to='contact' smooth={true} offset={0} duration={800} className="btn">Contact Us</ScrollLink>
-          ) : (
-            <RouterLink to="/#contact" className="btn">Contact Us</RouterLink>
-          )}
-        </li>
+    <nav aria-label="Main navigation" className={`container ${sticky || location.pathname !== '/' ? 'non-transparent-nav' : ''}`}>
+      <Link to="/" onClick={close} aria-label="Jom Hands-On home"><img src={logo} alt="Jom Hands-On" className="logo" width="140" /></Link>
+      <ul id="navigation-menu" className={mobileMenu ? '' : 'hide-mobile-menu'}>
+        <li><NavLink to="/" end onClick={close}>Home</NavLink></li>
+        <li><NavLink to="/about" onClick={close}>About Us</NavLink></li>
+        <li><NavLink to="/gallery" onClick={close}>Gallery</NavLink></li>
+        <li><Link to="/#contact" onClick={close} className="btn">Contact Us</Link></li>
       </ul>
-      <img src={menu} alt="menu icon" className='menu-icon' onClick={toggleMenu} />
+      <button type="button" className="menu-toggle" aria-label={mobileMenu ? 'Close menu' : 'Open menu'} aria-expanded={mobileMenu} aria-controls="navigation-menu" onClick={() => setMobileMenu(!mobileMenu)}><img src={menu} alt="" className="menu-icon" /></button>
     </nav>
   );
-};
-
-export default Navbar;
+}

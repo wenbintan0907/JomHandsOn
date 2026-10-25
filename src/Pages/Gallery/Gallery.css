@@ -1,162 +1,32 @@
-.about {
-    margin: 100px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.about-left {
-    flex-basis: 40%;
-    position: relative;
-}
-
-.about-right {
-    flex-basis: 56%;
-}
-
-.about-img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.about h3 {
-    font-weight: 600;
-    font-size: 16px;
-    color: #212EA0;
-}
-
-.about h2 {
-    font-size: 35px;
-    color: #000F38;
-    margin: 10px 0;
-    max-width: 400px;
-}
-
-.about p {
-    color: #676767;
-    margin-bottom: 15px;
-    font-size: 18px;
-    text-align: justify;
-}
-
-.about-page {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.team_banner {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    border-radius: 24px;
-}
-
+.gallery-page { text-align: center; }
 .slider-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 760px) 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  max-width: 896px;
+  margin: 0 auto;
 }
-  
-.slider-content {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-  
-.slider-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-  
-.slider-image-container {
-    flex: 0 0 100%;  /* Each image occupies 100% of the slider's width */
-    position: relative;
-    overflow: hidden;
-    border-radius: 24px;
-}
-  
-.slider-image {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-    transition: opacity 0.5s ease-in-out;
-    border-radius: 24px;
-}
-  
+.slider-content { min-width: 0; overflow: hidden; border-radius: 20px; background: #e4e9e9; }
+.slider-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; max-height: 440px; object-fit: cover; }
 .slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    transition: background-color 0.3s ease;
+  background: #212ea0;
+  color: white;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
-  
-.slider-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-  
-.slider-button.prev {
-    left: 20px;
-}
-  
-.slider-button.next {
-    right: 20px;
-}
-
-.event-title {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #000F38;
-    font-size: 25px;  /* Increased size */
-    padding: 20px 20px;
-
-}
-
-.transitioning .slider-image {
-    opacity: 0;
-    transform: translateX(-100%);
-}
-
-.event-title,
-.image-description {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.transitioning .event-title,
-.transitioning .image-description {
-  opacity: 0;
-}
-
-@media (max-width: 800px) {
-    .about {
-        flex-direction: column;
-    }
-
-    .about-left {
-        flex-basis: 100%;
-        margin: 20px;
-        order: 2;
-    }
-
-    .about-right {
-        flex-basis: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .slider-button {
-      width: 30px;
-      height: 30px;
-    }
+.slider-button:hover { background: #142070; }
+.gallery-caption { margin: 20px 0; color: #4a5568; font-size: 16px; }
+@media (max-width: 600px) {
+  .slider-container { grid-template-columns: 36px minmax(0, 1fr) 36px; gap: 10px; }
+  .slider-button { width: 36px; height: 36px; }
+  .slider-content { border-radius: 12px; }
 }

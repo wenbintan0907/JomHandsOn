@@ -1,9 +1,9 @@
 import React from 'react';
 import './IT.css';
 import ContactCard from '../ContactCard/ContactCard';
-import siew_hao from '../../assets/IT Dept/Siew Hao Individual Pic.JPG';
-import anas from '../../assets/IT Dept/Anas Individual Pic.JPG';
-import wenbin from '../../assets/IT Dept/wenbin.JPG';
+import siew_hao from '../../assets/IT Dept/Siew Hao Individual Pic.webp';
+import anas from '../../assets/IT Dept/Anas Individual Pic.webp';
+import wenbin from '../../assets/IT Dept/wenbin.webp';
 
 const IT = () => {
   const teamMembers = [
@@ -27,8 +27,8 @@ const IT = () => {
       image: wenbin,
       name: "Tan Wen Bin",
       instagram: "@tanwenbin0709",
-      age: "18", 
-      mbti: "ISTJ", 
+      age: "18",
+      mbti: "ISTJ",
       quote: "Dream big, lead with passion, and let your curiosity pave the way for innovation"
     },
   ];

@@ -87,3 +87,13 @@ nav ul li a {
         right: -200px;
     }
 }
+.menu-toggle { display: none; background: transparent; border: 0; padding: 8px; cursor: pointer; }
+nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+@media (max-width: 840px) {
+  .menu-toggle { display: block; }
+  nav ul.hide-mobile-menu { visibility: hidden; pointer-events: none; }
+}
+
+/* Keep navigation readable on the teal background and mobile drawer. */
+.non-transparent-nav ul, .dark-nav ul { color: #000f38; }
+@media (max-width: 840px) { nav ul { color: #000f38; } }

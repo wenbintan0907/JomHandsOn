@@ -9,7 +9,7 @@ const Mission = () => {
       {/* Product Section */}
       <section className="section">
         <div className="section-header">
-          <img src={mission_icon} alt="" />
+          <img loading="lazy" decoding="async" src={mission_icon} alt="" />
           <h2>Mission</h2>
         </div>
         <p className="main-text">Providing a platform for high school students to cultivate Malaysian youth’s interest towards STEM</p>
@@ -18,7 +18,7 @@ const Mission = () => {
       {/* Product Section */}
       <section className="section">
         <div className="section-header">
-          <img src={vision_icon} alt="" />
+          <img loading="lazy" decoding="async" src={vision_icon} alt="" />
           <h2>Vision</h2>
         </div>
         <p className="main-text">Equipping young minds with practical skills and encourage creative thinking when tackling STEM-related challenges in their everyday lives</p>

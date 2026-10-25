@@ -1,23 +1,23 @@
 import React from 'react';
 import './EventGallery.css';
-import event_1 from '../../assets/makerspace event pics!/IMG_8649.JPG'
+import event_1 from '../../assets/makerspace event pics!/IMG_8649.webp'
 import white_arrow from '../../assets/edusity_assets/white-arrow.png';
 import { Link } from 'react-router-dom';
 
 const EventGallery = () => {
   const event = {
     title: "Makerspace!",
-    date: "December 15, 2023",
-    image: ""
+    date: "November 23, 2024",
+    description: "Hands-on STEM learning at our Makerspace event."
   };
 
   return (
     <section className="event-section">
       <div className="event-card">
         <div className="event-image-container">
-          <img 
-            src={event_1} 
-            alt={event.title} 
+          <img loading="lazy" decoding="async"
+            src={event_1}
+            alt={event.title}
             className="event-image"
           />
           <div className="event-date">{event.date}</div>
@@ -28,10 +28,10 @@ const EventGallery = () => {
         </div>
       </div>
       {/* Add the button */}
-      <Link to="/gallery">
-        <button className="btn dark-btn">
-          View All Events <img src={white_arrow} alt="arrow" />
-        </button>
+      <Link to="/gallery" className="btn dark-btn">
+
+          View All Events <img loading="lazy" decoding="async" src={white_arrow} alt="arrow" />
+
       </Link>
     </section>
   );

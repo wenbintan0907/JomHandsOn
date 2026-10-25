@@ -10,7 +10,7 @@ const Committee2024 = () => {
       </h1>
       <Carousel data-bs-theme="dark">
         <Carousel.Item>
-          <img className="d-block CarouselImage" src="src\assets\Team1.JPG" />
+          <img loading="lazy" decoding="async" className="d-block CarouselImage" src="src\assets\Team1.JPG" />
         </Carousel.Item>
         <Carousel.Item>
           <div className="ActivityText">FOUNDERS</div>

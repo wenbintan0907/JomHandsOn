@@ -11,14 +11,14 @@ import Physics from '../../Components/Science/Physics';
 import Biology from '../../Components/Science/Biology';
 import Publicity from '../../Components/Publicity/Publicity';
 import Secretary from '../../Components/Secretary/Secretary';
-import team_img from '../../assets/Team1.JPG'
+import team_img from '../../assets/Team1.webp'
 
 const About = () => {
   return (
     <div className="container about-page">
       <FadeInSection>
         <Title subTitle='' title="OUR TEAM"></Title>
-        <img src={team_img} className='team_banner' alt=''/>
+        <img loading="lazy" decoding="async" src={team_img} className='team_banner' alt=''/>
       </FadeInSection>
       <FadeInSection>
         <Title subTitle='' title="MISSION AND VISION"></Title>

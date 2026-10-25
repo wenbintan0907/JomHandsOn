@@ -3,7 +3,7 @@ import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
 import sarvin from '../../assets/PHYSICSDEPT_SARVINTIRRAN.jpg';
 import harresh from '../../assets/PHYSICSDEPT _HARRESH.jpg';
-import adam from '../../assets/PHYSICSDEPT_ADAM.jpg'
+import adam from '../../assets/PHYSICSDEPT_ADAM.webp'
 
 const IT = () => {
   const teamMembers = [
@@ -11,8 +11,8 @@ const IT = () => {
       image: sarvin,
       name: "Sarvintirran",
       instagram: "@sarvin_tirran",
-      age: "18", 
-      mbti: "INTJ", 
+      age: "18",
+      mbti: "INTJ",
       quote: "Greatness pulls mediocrity into the mud. Get out there and get after it."
     },
     {

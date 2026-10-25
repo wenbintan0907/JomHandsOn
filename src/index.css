@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins&display=swap');
+
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Outfit", serif;
+  font-family: "Outfit", system-ui, sans-serif;
 }
 
 body {
@@ -24,6 +24,7 @@ a {
 }
 
 .btn {
+  text-decoration: none;
   background: white;
   color: #212121;
   padding: 14px 25px;
@@ -65,3 +66,21 @@ a {
     padding: 14px 22px;
   }
 }
+html { scroll-padding-top: 90px; }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid #142b79; outline-offset: 4px; }
+.skip-link { position: fixed; top: -100px; left: 12px; z-index: 100; background: white; padding: 12px; }
+.skip-link:focus { top: 12px; }
+.route-loading { min-height: 60vh; padding: 120px 10%; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .fade-in-section { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+}
+
+#contact { display: flow-root; scroll-margin-top: 0; padding-top: 48px; }
+.founders-team-link { margin-top: 32px; }
+.contact input:focus-visible, .contact textarea:focus-visible { outline: 3px solid #142b79; }
+
+.about-page { padding-top: 100px; padding-bottom: 100px; }
+.about-img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+@media (max-width: 480px) { .title h2 { font-size: 30px; overflow-wrap: anywhere; } }

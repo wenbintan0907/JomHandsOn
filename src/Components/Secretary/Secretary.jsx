@@ -1,9 +1,9 @@
 import React from 'react';
 import '../IT/IT.css'
 import ContactCard from '../ContactCard/ContactCard';
-import serene from '../../assets/SECRETARY_SERENE.jpg';
+import serene from '../../assets/SECRETARY_SERENE.webp';
 import verness from '../../assets/verness.jpeg';
-import mani from '../../assets/Secretary and Outreach/mani.jpg'
+import mani from '../../assets/Secretary and Outreach/mani.webp'
 
 const IT = () => {
   const teamMembers = [
@@ -27,16 +27,16 @@ const IT = () => {
       image: verness,
       name: "Muhammad Harith",
       instagram: "@har_1k1",
-      age: "18", 
-      mbti: "INTJ", 
+      age: "18",
+      mbti: "INTJ",
       quote: "The original is unfaithful to the translation."
     },
     {
       image: verness,
       name: "Verness Chia",
       instagram: "@vernessc57",
-      age: "18", 
-      mbti: "ENFP", 
+      age: "18",
+      mbti: "ENFP",
       quote: "Keep a single spark to start a prairie fire."
     },
   ];

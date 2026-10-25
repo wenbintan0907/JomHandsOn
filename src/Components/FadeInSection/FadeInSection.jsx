@@ -10,10 +10,11 @@ const FadeInSection = ({ children }) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setVisible(true);
+          observer.disconnect();
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0
     });
 
     const currentRef = domRef.current;
@@ -23,7 +24,7 @@ const FadeInSection = ({ children }) => {
 
     return () => {
       if (currentRef) {
-        observer.unobserve(currentRef);
+        observer.disconnect();
       }
     };
   }, []);
