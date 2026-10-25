@@ -1,4 +1,5 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useLayoutEffect, lazy, Suspense } from 'react';
+import { scrollToDestination } from './utils/navigation';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import FadeInSection from './Components/FadeInSection/FadeInSection';
@@ -16,20 +17,8 @@ const Gallery = lazy(() => import('./Pages/Gallery/Gallery.jsx'));
 
 const ScrollToTop = () => {
   const { pathname, hash, key } = useLocation();
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => {
-      if (hash) {
-        const target = document.getElementById(hash.slice(1));
-        if (target) {
-          const navHeight = document.querySelector('nav')?.getBoundingClientRect().height ?? 0;
-          window.scrollTo({
-            top: window.scrollY + target.getBoundingClientRect().top - navHeight + (hash === '#contact' ? 24 : 0),
-            behavior: 'instant',
-          });
-        }
-      } else window.scrollTo(0, 0);
-    });
-    return () => cancelAnimationFrame(frame);
+  useLayoutEffect(() => {
+    scrollToDestination(hash);
   }, [pathname, hash, key]);
 
   return null;
@@ -71,9 +60,8 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <ScrollToTop />
         <a className="skip-link" href="#main-content">Skip to content</a><Navbar />
-        <main id="main-content"><Suspense fallback={<p className="route-loading" role="status">Loading…</p>}><Routes>
+        <main id="main-content"><Suspense fallback={<p className="route-loading" role="status">Loading…</p>}><ScrollToTop /><Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={
             <FadeInSection>
